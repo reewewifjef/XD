@@ -15,7 +15,7 @@ local stringList = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM12345678
 local payloadList = table.create(20)
 local CONSTANTS = {
 	CONFIG_URL = "https://raw.githubusercontent.com/reewewifjef/XD/refs/heads/main/src/default-config.lua",
-	FOLDER_NAME = "XDLEAKER-Scanner"
+	FOLDER_NAME = "XD"
 }
 local remoteInfo = {
 	["foundBackdoor"] = false,
@@ -29,7 +29,7 @@ local remoteInfo = {
 	}
 }
 local msgOutputs = {
-	["mainTabText"] = "--[[\n\tXDLEAKER Scanner Injected \n\tUsing 'github.com/reewewifjef/Rmotescan' for interface.\n\n\tDocumentation: github.com/jLn0n/beckdeer-skenner/blob/main/README.MD\n\tCommunity server: https://discord.gg/jvb7XNzNPN \n--]]\n",
+	["mainTabText"] = "--[[\n\tXDLEAKER Scanner Injected \n\tUsing 'github.com/reewewifjef/Rmotescan' for interface.\n\tCommunity server: https://discord.gg/jvb7XNzNPN \n--]]\n",
 
 	["attached"] = "\n Attached Remote: %s\n Type: %s\n Payload: %s",
 	["cacheLoaded"] = "Place cache of [%s] has been loaded.",
