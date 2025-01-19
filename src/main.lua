@@ -29,7 +29,7 @@ local remoteInfo = {
 	}
 }
 local msgOutputs = {
-	["mainTabText"] = "--[[\n\tjLn0n's beckdeer execeeter loaded!\n\tUsing 'github.com/jLn0n/executor-gui' for interface.\n\n\tDocumentation: github.com/jLn0n/beckdeer-skenner/blob/main/README.MD\n\tCommunity server: https://discord.gg/jvb7XNzNPN \n--]]\n",
+	["mainTabText"] = "--[[\n\tXDLEAKER Scanner Injected \n\tUsing 'github.com/jLn0n/executor-gui' for interface.\n\n\tDocumentation: github.com/jLn0n/beckdeer-skenner/blob/main/README.MD\n\tCommunity server: https://discord.gg/jvb7XNzNPN \n--]]\n",
 
 	["attached"] = "\n Attached Remote: %s\n Type: %s\n Payload: %s",
 	["cacheLoaded"] = "Place cache of [%s] has been loaded.",
