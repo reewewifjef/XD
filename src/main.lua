@@ -99,7 +99,7 @@ end
 
 local function newNotification(msgText)
 	return starterGui:SetCore("SendNotification", {
-		Title = "[jLn0n's beckdeer skenner]",
+		Title = "[XDLEAKER Scanner]",
 		Text = msgText,
 		Duration = (5 + (#msgText / 80))
 	})
@@ -463,7 +463,7 @@ local function onAttached(remoteInfoParams)
 	logToConsole("warn", string.format(msgOutputs.attached, getFullNameOf(remoteInfoParams.instance), remoteInfoParams.instance.ClassName, remoteInfoParams.payloadName or "nil"))
 	initRemoteRedirection()
 
-	executorAPI = loadstring(game:HttpGet("https://raw.githubusercontent.com/jLn0n/executor-gui/main/src/loader.lua"))({
+	executorAPI = loadstring(game:HttpGet("https://raw.githubusercontent.com/reewewifjef/Rmotescan/refs/heads/main/src/loader.lua"))({
 		mainTabText = msgOutputs.mainTabText,
 		customExecution = true,
 		executeFunc = function(source) return execScript(source) end,
