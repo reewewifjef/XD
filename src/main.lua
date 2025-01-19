@@ -36,7 +36,7 @@ local msgOutputs = {
 	["printRemote"] = "\n Remote: %s | [%s]\n Type: %s",
 
 	["scanMsg1"] = "لقد بدأ الفحص يرجى الانتظار.",
-	["scanMsg2"] = "You could see the remotes being scanned in the Developer Console if config.enableLogging is set to true.",
+	["scanMsg2"] = "يمكن رؤية نتائج على Cmd فقط قم بالضغط على F9 من الكيبورد.",
 	["scanBenchmark"] = "Took %.2f second(s) to scan remotes.",
 
 	["cacheFailed"] = "Failed to load the backdoor cache of [%s], it might be outdated.",
