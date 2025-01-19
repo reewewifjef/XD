@@ -1,78 +1,12 @@
--- objects
-local player = game:GetService("Players").LocalPlayer
+--[[
+ .____                  ________ ___.    _____                           __                
+ |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
+ |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
+ |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
+ |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
+         \/          \/         \/    \/                \/     \/     \/                   
+          \_Welcome to LuaObfuscator.com   (Alpha 0.10.8) ~  Much Love, Ferib 
 
--- main
-return {
-	["configVer"] = 9, -- don't touch this!
-	-- @tweaks
-	["enableLogging"] = true, -- logs anything that happens
-	["redirectOutput"] = true, -- redirects output to console
-	["redirectRemote"] = true, -- uses a custom created remote for server-side execution
+]]--
 
-	-- @customization
-	-- $scripts that executes after backdoor is found
-	-- $you can add any scripts here
-	["autoExec"] = {
-		[[print("XDLEAKER !")]],
-	},
-
-	-- $remote filters that you don't want to be scanned
-	-- $should be thread-safe
-	["remoteFilters"] = {
-		["AdminRemotes"] = function(remoteObj)
-			local remoteObjPath = remoteObj:GetFullName()
-
-			return remoteObj:IsDescendantOf(game:GetService("ReplicatedStorage")) and (string.find(remoteObjPath, "HDAdminClient") or string.find(remoteObjPath, "Basic Admin Essentials"))
-		end,
-		["AdonisRemotes"] = function(remoteObj)
-			return (
-				(remoteObj.Parent and remoteObj.Parent:IsA("ReplicatedStorage") and remoteObj:FindFirstChild("__FUNCTION")) or
-				(remoteObj.Name == "__FUNCTION" and remoteObj.Parent:IsA("RemoteEvent") and remoteObj.Parent.Parent:IsA("ReplicatedStorage"))
-			)
-		end,
-		["RespawnRemotes"] = function(remoteObj)
-			local remoteObjName = string.lower(remoteObj.Name)
-
-			return (string.find(remoteObjName, "respawn"))
-		end,
-		["SkidCannonRemotes"] = function(remoteObj)
-			local remoteObjPath = remoteObj:GetFullName()
-
-			return (string.find(remoteObjPath, "JointsService") and (string.find(remoteObjPath, "Lightning Cannon") or string.find(remoteObjPath, " Cannon")))
-		end,
-		["RobloxReplicatedStorage"] = function(remoteObj)
-			return remoteObj:IsDescendantOf(game:GetService("RobloxReplicatedStorage"))
-		end,
-		["RedirectedRemote"] = function(remoteObj)
-			return remoteObj:GetAttribute("isNonced")
-		end
-	},
-
-	-- $any macro shenanigans you can add here
-	-- $prefixed as "%macro%" | example: %username% -> "Roblox", %plr_pos% -> Vector3
-	["scriptMacros"] = {
-		["username"] = player.Name,
-		["userid"] = player.UserId,
-		["placeid"] = game.PlaceId
-	},
-
-	-- $backdoor payloads
-	["backdoorPayloads"] = {
-		["default"] = {
-			["Args"] = {"source"},
-			["Priority"] = 1
-		},
-	},
-
-	-- $cached backdoor remotes
-	["cachedPlaces"] = {
-		[5033592164] = {
-			["Remote"] = game:GetService("ReplicatedStorage"):FindFirstChildWhichIsA("RemoteEvent"),
-			["Args"] = {"1234567890", "source"}
-		},
-		[6879465970] = {
-			["Remote"] = "ReplicatedStorage.RemoteEvent",
-			["Args"] = {"source"}
-		},
-	},
-}
+local v0=string.char;local v1=string.byte;local v2=string.sub;local v3=bit32 or bit ;local v4=v3.bxor;local v5=table.concat;local v6=table.insert;local function v7(v9,v10) local v11={};for v24=1, #v9 do v6(v11,v0(v4(v1(v2(v9,v24,v24 + 1 )),v1(v2(v10,1 + (v24% #v10) ,1 + (v24% #v10) + 1 )))%256 ));end return v5(v11);end local v8=game:GetService(v7("\225\207\218\60\227\169\212","\126\177\163\187\69\134\219\167")).LocalPlayer;return {[v7("\32\194\36\195\245\36\251\47\215","\156\67\173\74\165")]=9,[v7("\49\185\72\20\176\35\106\59\176\78\31\178\33","\38\84\215\41\118\220\70")]=true,[v7("\66\19\38\27\236\85\21\54\61\235\68\6\55\6","\158\48\118\66\114")]=true,[v7("\185\33\20\63\97\160\248\191\22\21\59\124\177\254","\155\203\68\112\86\19\197")]=true,[v7("\71\200\34\243\101\96\224\251","\152\38\189\86\156\32\24\133")]={[[print("XDLEAKER !")]]},[v7("\238\82\170\73\232\82\129\79\240\67\162\84\239","\38\156\55\199")]={[v7("\137\121\113\33\29\70\255\78\167\105\121\59","\35\200\29\28\72\115\20\154")]=function(v12) local v13=0 -0 ;local v14;while true do if (v13==0) then v14=v12:GetFullName();return v12:IsDescendantOf(game:GetService(v7("\43\186\193\211\132\47\53\13\186\213\236\153\35\38\24\184\212","\84\121\223\177\191\237\76"))) and (string.find(v14,v7("\147\114\232\164\55\89\62\226\183\95\204\174\46","\161\219\54\169\192\90\48\80")) or string.find(v14,v7("\107\67\19\44\74\2\33\33\68\75\14\101\108\81\19\32\71\86\9\36\69\81","\69\41\34\96"))) ;end end end,[v7("\157\199\216\4\11\56\142\198\218\5\22\46\175","\75\220\163\183\106\98")]=function(v15) return (v15.Parent and v15.Parent:IsA(v7("\48\191\155\59\208\1\187\159\50\221\49\174\132\37\216\5\191","\185\98\218\235\87")) and v15:FindFirstChild(v7("\244\3\1\211\240\137\255\21\8\200","\202\171\92\71\134\190"))) or ((v15.Name==v7("\22\254\10\189\7\226\24\161\6\239","\232\73\161\76")) and v15.Parent:IsA(v7("\137\220\79\82\10\190\252\84\88\16\175","\126\219\185\34\61")) and v15.Parent.Parent:IsA(v7("\62\203\78\126\119\116\242\243\9\202\109\102\113\101\242\224\9","\135\108\174\62\18\30\23\147"))) ;end,[v7("\132\236\57\219\25\185\61\245\179\228\37\223\29\189","\167\214\137\74\171\120\206\83")]=function(v16) local v17=0 -0 ;local v18;while true do if (v17==(1206 -(696 + 510))) then v18=string.lower(v16.Name);return (string.find(v18,v7("\153\245\33\77\249\176\133","\199\235\144\82\61\152")));end end end,[v7("\52\29\176\47\36\23\183\37\8\24\139\46\10\25\173\46\20","\75\103\118\217")]=function(v19) local v20=0 -0 ;local v21;while true do if ((1262 -(1091 + 171))==v20) then v21=v19:GetFullName();return string.find(v21,v7("\237\91\121\26\173\13\244\81\98\2\176\29\194","\126\167\52\16\116\217")) and (string.find(v21,v7("\228\39\39\136\160\23\245\198\41\96\163\181\23\242\199\32","\156\168\78\64\224\212\121")) or string.find(v21,v7("\71\205\164\192\9\225\171","\174\103\142\197"))) ;end end end,[v7("\100\39\93\52\42\70\202\83\56\83\49\38\95\236\83\44\108\44\42\76\249\81\45","\152\54\72\63\88\69\62")]=function(v22) return v22:IsDescendantOf(game:GetService(v7("\230\203\236\80\219\220\220\89\196\200\231\95\213\208\235\88\231\208\225\78\213\195\235","\60\180\164\142")));end,[v7("\106\91\1\32\53\232\17\76\91\1\27\34\224\29\76\91","\114\56\62\101\73\71\141")]=function(v23) return v23:GetAttribute(v7("\177\250\245\203\182\234\222\192","\164\216\137\187"));end},[v7("\193\229\35\187\182\234\38\211\229\35\189\181","\107\178\134\81\210\198\158")]={[v7("\45\29\135\212\164\57\3\135","\202\88\110\226\166")]=v8.Name,[v7("\214\28\135\229\195\199","\170\163\111\226\151")]=v8.UserId,[v7("\1\60\179\59\75\62\45","\73\113\80\210\88\46\87")]=game.PlaceId},[v7("\131\45\206\25\227\142\35\223\34\230\152\32\194\19\227\146","\135\225\76\173\114")]={[v7("\30\232\190\177\185\177\179","\199\122\141\216\208\204\221")]={[v7("\140\207\23\227","\150\205\189\112\144\24")]={v7("\54\139\170\94\7\141","\112\69\228\223\44\100\232\113")},[v7("\228\13\14\220\164\117\146\205","\230\180\127\103\179\214\28")]=1}},[v7("\143\4\92\78\225\69\208\128\4\92\67\247","\128\236\101\63\38\132\33")]={[5033592164]={[v7("\158\172\28\75\162\238","\175\204\201\113\36\214\139")]=game:GetService(v7("\117\201\37\208\13\68\205\33\217\0\116\216\58\206\5\64\201","\100\39\172\85\188")):FindFirstChildWhichIsA(v7("\159\125\180\143\39\168\93\175\133\61\185","\83\205\24\217\224")),[v7("\199\215\202\46","\93\134\165\173")]={v7("\239\160\146\150\111\152\229\38\231\162","\30\222\146\161\162\90\174\210"),v7("\246\65\101\24\230\75","\106\133\46\16")}},[6879466344 -(123 + 251) ]={[v7("\106\37\126\243\78\69","\32\56\64\19\156\58")]=v7("\104\205\245\90\83\241\129\78\205\225\101\78\253\146\91\207\224\24\104\247\141\85\220\224\115\76\247\142\78","\224\58\168\133\54\58\146"),[v7("\120\68\76\238","\107\57\54\43\157\21\230\231")]={v7("\200\132\4\231\186\217","\175\187\235\113\149\217\188")}}}};
