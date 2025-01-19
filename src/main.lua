@@ -37,9 +37,9 @@ local msgOutputs = {
 
 	["scanMsg1"] = "لقد بدأ الفحص يرجى الانتظار.",
 	["scanMsg2"] = "يمكن رؤية نتائج على Cmd فقط قم بالضغط على F9 من الكيبورد.",
-	["scanBenchmark"] = "Took %.2f second(s) to scan remotes.",
+	["scanBenchmark"] = " %.2f الوقت الذي استغرق للبحث.",
 
-	["cacheFailed"] = "Failed to load the backdoor cache of [%s], it might be outdated.",
+	["cacheFailed"] = "لم يتم العثور على BackDoors.",
 	["outdatedConfig"] = "The configuration file is outdated!\nIt is recommended to update the configuration to prevent errors.",
 	["configLoadFailed"] = "Local configuration failed to load, it might be corrupted.",
 	["noBackdoorRemote"] = "No backdoored remote(s) can be found here!",
