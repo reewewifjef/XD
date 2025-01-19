@@ -42,7 +42,7 @@ local msgOutputs = {
 	["cacheFailed"] = "لم يتم العثور على ثغره.",
 	["outdatedConfig"] = "لم يتم العثور على ثغره.",
 	["configLoadFailed"] = "لم يتم العثور على ثغره.",
-	["noBackdoorRemote"] = "لم يتم العثور على ثغره",
+	["noBackdoorRemote"] = "",
 	["remoteRedirectLoadFailed"] = "لم يتم العثور على ثغره.",
 }
 local msgBoxParams = {
