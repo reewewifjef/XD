@@ -43,7 +43,7 @@ local msgOutputs = {
 	["outdatedConfig"] = "لم يتم العثور على ثغره.",
 	["configLoadFailed"] = "لم يتم العثور على ثغره.",
 	["noBackdoorRemote"] = "لم يتم العثور على ثغره",
-	["remoteRedirectLoadFailed"] = "لم يتم العثور على ثغره.",
+	["remoteRedirectLoadFailed"] = ".",
 }
 local msgBoxParams = {
 	["DiscordInvitePrompt"] = {
