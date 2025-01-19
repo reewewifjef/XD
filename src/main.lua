@@ -35,7 +35,7 @@ local msgOutputs = {
 	["cacheLoaded"] = "Place cache of [%s] has been loaded.",
 	["printRemote"] = "\n Remote: %s | [%s]\n Type: %s",
 
-	["scanMsg1"] = "Remote scanning has been started.",
+	["scanMsg1"] = "لقد بدأ الفحص يرجى الانتظار.",
 	["scanMsg2"] = "You could see the remotes being scanned in the Developer Console if config.enableLogging is set to true.",
 	["scanBenchmark"] = "Took %.2f second(s) to scan remotes.",
 
