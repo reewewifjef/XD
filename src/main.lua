@@ -39,11 +39,11 @@ local msgOutputs = {
 	["scanMsg2"] = "يمكن رؤية نتائج على Cmd فقط قم بالضغط على F9 من الكيبورد.",
 	["scanBenchmark"] = " %.2f الوقت الذي استغرق للبحث.",
 
-	["cacheFailed"] = "لم يتم العثور على BackDoors.",
-	["outdatedConfig"] = "The configuration file is outdated!\nIt is recommended to update the configuration to prevent errors.",
-	["configLoadFailed"] = "Local configuration failed to load, it might be corrupted.",
-	["noBackdoorRemote"] = "No backdoored remote(s) can be found here!",
-	["remoteRedirectLoadFailed"] = "Remote redirection failed to load, using original remote.",
+	["cacheFailed"] = "لم يتم العثور على ثغره.",
+	["outdatedConfig"] = "لم يتم العثور على ثغره.",
+	["configLoadFailed"] = "لم يتم العثور على ثغره.",
+	["noBackdoorRemote"] = "لم يتم العثور على ثغره",
+	["remoteRedirectLoadFailed"] = "لم يتم العثور على ثغره.",
 }
 local msgBoxParams = {
 	["DiscordInvitePrompt"] = {
